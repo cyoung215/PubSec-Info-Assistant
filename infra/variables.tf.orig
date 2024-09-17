@@ -187,11 +187,9 @@ variable "openAiSkuName" {
   default = "S0"
 }
 
-////Changed from original
-
 variable "chatGptDeploymentName" {
   type    = string
-  default = "gpt-4o"
+  default = "gpt-35-turbo-16k"
 }
 
 variable "azureOpenAIEmbeddingDeploymentName" {
@@ -240,18 +238,16 @@ variable "appServicePlanName" {
   default = ""
 }
 
-////Original had S1, changed to Basic/B1
-
 variable "appServiceSkuSize" {
   description = "The size of the app service plan for the IA website. Must match with the tier value in appServiceSkuTier."
   type = string
-  default = "B1"
+  default = "S1"
 }
 
 variable "appServiceSkuTier" {
   description = "The tier of the app service plan for the IA website. Must match with the size value in appServiceSkuSize."
   type = string
-  default = "Basic"
+  default = "Standard"
   
 }
 
@@ -260,18 +256,16 @@ variable "enrichmentAppServicePlanName" {
   default = ""
 }
 
-////Original had P2v3, changed to Basic/B1
-
 variable "enrichmentAppServiceSkuSize" {
   description = "The size of the app service plan for the enrichment service. Must match with the tier value in enrichmentAppServiceSkuTier."
   type = string
-  default = "B1"
+  default = "P2v3"
 }
 
 variable "enrichmentAppServiceSkuTier" {
   description = "The tier of the app service plan for the enrichment service. Must match with the size value in enrichmentAppServiceSkuSize."
   type = string
-  default = "Basic"
+  default = "PremiumV3"
 }
 
 variable "logAnalyticsName" {
@@ -299,17 +293,16 @@ variable "functionsAppName" {
   default = ""
 }
 
-////Original had S2, changed to Basic/B1
 variable "functionsAppSkuSize" {
   description = "The size of the app service plan for the functions app. Must match with the tier value in functionsAppSkuTier."
   type = string
-  default = "B1"
+  default = "S2"
 }
 
 variable "functionsAppSkuTier" {
   description = "The tier of the app service plan for the functions app. Must match with the size value in functionsAppSkuSize."
   type = string
-  default = "Basic"
+  default = "Standard"
 }
 
 variable "videoIndexerName" {
@@ -322,11 +315,9 @@ variable "searchServicesName" {
   default = ""
 }
 
-////Original had standard, changed to basic
-
 variable "searchServicesSkuName" {
   type    = string
-  default = "basic"
+  default = "standard"
 }
 
 variable "storageAccountName" {
@@ -359,16 +350,14 @@ variable "chatWarningBannerText" {
   default = ""
 }
 
-////Original had gpt-35-turbo-16k, changed to gpt-4o/2024-08-06
-
 variable "chatGptModelName" {
   type    = string
-  default = "gpt-4o"
+  default = "gpt-35-turbo-16k"
 }
 
 variable "chatGptModelVersion" {
   type    = string
-  default = "2024-08-06"
+  default = "0613"
 }
 
 variable "chatGptDeploymentCapacity" {
